@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Animal Rescue Website
 
-## Getting Started
+This is an animal rescue website built with Next.js. The website allows users to log in using their GitHub account, send data for rescue with location, donate for animals, and adopt animals. The site is fully responsive and works well on both desktop and mobile devices.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Authentication**: Login using GitHub with NextAuth.
+- **Data Submission**: Users can send data for rescue including location details.
+- **Donations**: Users can donate for animal welfare.
+- **Adoptions**: Users can adopt animals after logging in.
+- **Responsive Design**: Fully responsive, works on all screen sizes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Next.js**: React framework for server-rendered applications.
+- **NextAuth**: Authentication for Next.js applications.
+- **MongoDB**: Database to store user and animal data.
+- **Razorpay**: Payment gateway for handling donations.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/PatelTirth25/Pescue-Rescue.git
+    cd Pescue-Rescue
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Setup environment variables**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    Create a `.env` file in the root of your project and add the following variables:
+    ```env
+    GITHUB_ID=<your-github-client-id>
+    GITHUB_SECRET=<your-github-client-secret>
+    MONGODB_URI=<your-mongodb-uri>
+    NEXT_PUBLIC_RAZORPAY_ID=<your-razorpay-public-id>
+    RAZORPAY_SECRET=<your-razorpay-secret-key>
+    ```
 
-## Deploy on Vercel
+4. **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Login with GitHub
+
+Users can log in using their GitHub account. This is managed by NextAuth.
+
+### Sending Rescue Data
+
+After logging in, users can send data for animal rescue, including their location and image of the animal in need.
+
+### Donating for Animals
+
+Users can make donations to support the animals using Razorpay as the payment gateway.
+
+### Adopting Animals
+
+Logged-in users can schedule animal adoption.
+
+## Contributing
+
+Contributions are welcome! Please create an issue or submit a pull request for any features, bug fixes, or enhancements.
+
